@@ -1,0 +1,56 @@
+// Program pengatur alokasi keuangan 
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int no,kos;
+    double umr, money, kebutuhan,tabungan,sisa;
+    cout<< "Masukkan angka 1 jika kamu bekerja dan 0 jika bukan"<<endl;
+    cin>>no;
+    if (no == 1)
+    {
+        cout<< " Masukkan penghasilan anda = "<<endl;
+        cin>> money;
+        cout<< " Berapa UMR di wilayah anda ?"<<endl;
+        cin>> umr;
+        if(money<=umr) {
+            kebutuhan = money*0.80;
+            tabungan = money*0.20;
+        cout<<"Anda sebaiknya mengalokasikan uang anda sebesar "<< kebutuhan<< " untuk kebutuhan harian dan sebesar "<<tabungan<< " sebagai tabungan" <<endl;
+        }
+        if(money>(umr+umr*0.30),money<=umr*3){
+        kebutuhan = money*0.50;
+        tabungan = money*0.20;
+        sisa = money*0.30;
+        cout<<"Anda sebaiknya mengalokasikan uang anda sebesar "<< kebutuhan<<" untuk kebutuhan harian dan sebesar "<<tabungan<< " sebagai     tabungan" << "kemudian uang sebesar"<< sisa <<" bisa digunakan untuk hal lain"<< endl;
+        }
+        if(money>(umr*3)){
+            kebutuhan = money*0.40;
+            tabungan = money*0.35;
+            sisa = money*0.25;
+            cout<<"Anda sebaiknya mengalokasikan uang anda sebesar "<<kebutuhan<< " untuk kebutuhan harian dan sebesar "<<tabungan<< " sebagai  tabungan " << "kemudian uang sebesar"<< sisa <<" bisa digunakan untuk hal lain"<< endl;
+        }
+    } else {
+        cout<<" Berapa uang yang kamu punya ?"<<endl;
+        cin>> money;
+        cout<< "Apakah kamu anak kos? ( 1 untuk ya dan 0 untuk tidak) "<<endl;
+        cin>>kos;
+        if(kos == 1 ){
+            kebutuhan = money*0.60;
+            tabungan = money*0.20;
+            sisa = money*0.20;
+            cout<<"Anda sebaiknya mengalokasikan uang anda sebesar "<<kebutuhan<< " untuk kebutuhan harian dan sebesar " <<tabungan<< " sebagai  tabungan " << "kemudian uang sebesar"<< sisa <<" bisa digunakan untuk hal lain"<< endl; }
+            else {
+                kebutuhan = money*0.50;
+                tabungan = money*0.30;
+                sisa = money*0.20;
+                cout<<"Anda sebaiknya mengalokasikan uang anda sebesar " <<kebutuhan<< " untuk kebutuhan harian dan sebesar "<<tabungan<< " sebagai  tabungan " << "kemudian uang sebesar"<< sisa <<" bisa digunakan untuk hal lain"<< endl; }
+               
+               
+
+        } 
+        cout<<" INI HANYALAH SEBATAS SARAN MENGALOKASIKAN UANG ANDA"<<endl;
+        cout<<" APABILA ADA SUATU HAL LAIN MAKA OPSI ADA DI TANGAN ANDA"<<endl;
+}
